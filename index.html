@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans&display=swap" rel="stylesheet">
+
   <title>Pesquisa Culturama</title>
+  <link rel="icon" href="./img/culturama-favico.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
     <header>
+      <img src="./img/logo-culturama.png" alt="Logo Culturama">
       <h1>Pesquisa Online</h1>
     </header>
     <section>
-      <form action="" method="get">
+      <form action="./sucesso.html" method="get">
 
           <fieldset>
             <!-- DADOS PESSOAIS -->
@@ -37,12 +45,14 @@
           <br>
 
           <label for="PhoneNumber">Número</label>
-          <input id="PhoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="11 00000-0000" required>
+          <input id="PhoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="11 00000-0000" required aria-describedby="phoneHelp">
+          <small id="phoneHelp">Preencha com 11 dígitos no formato: DDD + Números sem espaços ou hífen.</small>
           
           <br>
 
           <label for="Image">Upload de Foto</label>
-          <input id="Image" type="file" accept="image/*" name="userImage">
+          <input id="Image" type="file" accept="image/*" name="userImage" aria-describedby="imageHelp">
+          <small id="imageHelp">Envie uma foto no formato PNG ou JPEG</small>
 
           <br>
 
@@ -51,12 +61,13 @@
           <fieldset>
             <legend>Perfil</legend>
             <p>Gênero:</p>
+            <br>
             <input id="GenderF" type="radio" name="userGender" value="Feminino" required>
             <label for="GenderF">Feminino</label>
-            <br>
+            
             <input id="GenderM" type="radio" name="userGender" value="Masculino" required>
             <label for="GenderM">Masculino</label>
-            <br>
+            
             <input id="GenderN" type="radio" name="userGender" value="Preferio não Informar" required>
             <label for="GenderN">Prefiro não Informar</label>
 
@@ -114,6 +125,7 @@
             <legend>Hábitos</legend>
 
             <p>Redes Sociais</p>
+            <br>
             <input id="instragram" type="checkbox" name="social" value="Instagram">
             <label for="instragram">Instagram</label>
             <br>
@@ -145,6 +157,7 @@
 
           <fieldset>
             <p>O que você acha do nosso serviço?</p>
+            <br>
             <legend>Pesquisa de Satisfação</legend>
             <input id="userOtimo" type="radio" name="userSatisfaction" value="Feminino" required>
             <label for="userOtimo">Ótimo</label>
@@ -173,9 +186,10 @@
             <label for="userGetResult">Desejo receber o resultado por E-mail</label>
           </fieldset>
 
-          <button type="submit">Enviar</button>
-          <button type="reset">Limpar</button>
+          <button type="submit" aria-label="Enviar Formulário">Enviar</button>
+          <button type="reset" aria-label="Limpar o Formulário">Limpar</button>
       </form>
     </section>
+  </main>
 </body>
 </html>
