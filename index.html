@@ -140,8 +140,29 @@
 
             <label for="favoriteColor">Cor favorita</label>
             <input type="color" name="userFavoriteColor" id="favoriteColor">
+            <br>
           </fieldset>
 
+          <fieldset>
+            <p>O que você acha do nosso serviço?</p>
+            <legend>Pesquisa de Satisfação</legend>
+            <input id="userOtimo" type="radio" name="userSatisfaction" value="Feminino" required>
+            <label for="userOtimo">Ótimo</label>
+            <br>
+            <input id="userBom" type="radio" name="userSatisfaction" value="Masculino" required>
+            <label for="userBom">Boa</label>
+            <br>
+            <input id="userRegular" type="radio" name="userSatisfaction" value="Preferio não Informar" required>
+            <label for="userRegular">Regular</label>
+            <br>
+            <input id="userRuim" type="radio" name="userSatisfaction" value="Preferio não Informar" required>
+            <label for="userRuim">Ruim</label>
+            <br>
+
+            <label for="comment">Escreva sua opinião:</label>
+            <textarea id="comment" type="text" name="userComment" placeholder="Escreva aqui sua opinião..."></textarea>
+          </fieldset>
+          
           <button type="submit">Enviar</button>
       </form>
     </section>
