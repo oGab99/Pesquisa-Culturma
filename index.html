@@ -45,7 +45,8 @@
           <br>
 
           <label for="PhoneNumber">Número</label>
-          <input id="PhoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="11 00000-0000" required>
+          <input id="PhoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="11 00000-0000" required aria-describedby="phoneHelp">
+          <small id="phoneHelp">Preencha com 11 dígitos no formato: DDD + Números sem espaços ou hífen.</small>
           
           <br>
 
