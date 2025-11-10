@@ -51,7 +51,8 @@
           <br>
 
           <label for="Image">Upload de Foto</label>
-          <input id="Image" type="file" accept="image/*" name="userImage">
+          <input id="Image" type="file" accept="image/*" name="userImage" aria-describedby="imageHelp">
+          <small id="imageHelp">Envie uma foto no formato PNG ou JPEG</small>
 
           <br>
 
@@ -185,8 +186,8 @@
             <label for="userGetResult">Desejo receber o resultado por E-mail</label>
           </fieldset>
 
-          <button type="submit">Enviar</button>
-          <button type="reset">Limpar</button>
+          <button type="submit" aria-label="Enviar Formulário">Enviar</button>
+          <button type="reset" aria-label="Limpar o Formulário">Limpar</button>
       </form>
     </section>
   </main>
